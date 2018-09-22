@@ -51,6 +51,10 @@
 #include <Adafruit_TLC5947.h>
 #endif
 
+#if USE_WS2812
+#include <Adafruit_NeoPixel.h>
+#endif
+
 
 #include "MCP41xxxClass.h"
 #include "BaseClass.h"
@@ -78,6 +82,7 @@
 #include "WireClass.h"
 
 #include "TLC5947Class.h"
+#include "WS2812Class.h"
 #include "EspClass.h"
 #include "UltrasonicClass.h"
 #include "ColorSensorClass.h"
@@ -113,6 +118,7 @@ void setup() {
     REGISTER_CLASS_CONDITIONAL(WireClass, USE_Wire);
     
     REGISTER_CLASS_CONDITIONAL(TLC5947Class, USE_TLC5947);
+    REGISTER_CLASS_CONDITIONAL(WS2812Class, USE_WS2812);
 
     REGISTER_CLASS_CONDITIONAL(nanpy::EspClass, USE_ESP);
 
