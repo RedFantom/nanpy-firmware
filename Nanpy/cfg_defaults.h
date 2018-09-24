@@ -103,3 +103,7 @@
 #ifndef USE_ColorSensor
 #  define USE_ColorSensor 		0
 #endif
+
+#ifndef USE_WS2812
+#  define USE_WS2812        1
+#endif
